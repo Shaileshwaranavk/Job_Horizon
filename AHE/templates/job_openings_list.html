@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ organization.name }} Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/SO.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Company Information -->
+        <div class="company-info">
+            <h3>Company Information</h3>
+            <p><strong>Name:</strong> {{ Organization.name }}</p>
+            <p><strong>Address:</strong> {{ Organization.address }}</p>
+            <p><strong>Email:</strong> {{ Organization.email }}</p>
+            <p><strong>Phone:</strong> {{ Organization.phone }}</p>
+        </div>
+
+        <h2>Your Job Openings</h2>
+
+        <div class="job-list">
+            {% for job in job_openings %}
+            <div class="job-item">
+                <h3>{{ job.job_title }}</h3>
+                <p><strong>Description:</strong> {{ job.job_description }}</p>
+                <p><strong>Skills Required:</strong> {{ job.required_skills }}</p>
+                <p><strong>Pay:</strong> ${{ job.pay }}</p>
+                <p><strong>Location:</strong> {{ job.location }}</p>
+            </div>
+            {% empty %}
+            <p>No job openings available at the moment.</p>
+            {% endfor %}
+        </div>
+
+        <!-- Show Create Job link only for authenticated users (organizations) -->
+        {% if user.is_authenticated %}
+            <a href="{% url 'create_job' organization.id %}">Create New Job Opening</a>
+        {% else %}
+            <p>Log in as Organization to create job openings.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

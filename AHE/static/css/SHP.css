@@ -1,0 +1,186 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header_section {
+  background-color: #343a40;
+  padding: 20px 0;
+}
+
+.header_section .container-fluid {
+  text-align: center;
+}
+
+.header_section h1 {
+  color: #fff;
+}
+
+/* Slider Styles */
+.slider_section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-inner .row {
+  width: 100%;
+}
+
+.detail-box {
+  padding: 20px;
+}
+
+.detail-box h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.btn-box .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 10px;
+  text-decoration: none;
+  margin-right : 20px;
+}
+
+.btn-box .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Top Companies Section */
+.top_companies_section {
+  padding: 60px 0;
+}
+
+.custom-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.card-header.bg-primary {
+  background-color: #007bff;
+}
+
+.card-header.bg-info {
+  background-color: #17a2b8;
+}
+
+.card-header.bg-warning {
+  background-color: #ffc107;
+}
+
+.card-header.bg-success {
+  background-color: #28a745;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Layout Padding */
+.layout_padding {
+  padding: 60px 0;
+}
+
+/* Image Styles */
+.img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Styles for the freelancer cards */
+.freelancer_section {
+  padding: 60px 0;
+  background-color: #f4f7fa;
+}
+
+.freelancer_section .custom-card {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.freelancer_section .card-header {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.freelancer_section .card-body {
+  padding: 20px;
+}
+
+.freelancer_section .card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.freelancer_section .card-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.freelancer_section .btn {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.freelancer_section .heading_container h2 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Additional Custom Styles */
+.detail-box h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}

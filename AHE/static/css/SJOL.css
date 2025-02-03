@@ -1,0 +1,87 @@
+/* SO.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+/* Job List Container */
+.job-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+}
+
+/* Job Card Styles */
+.job-card {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1abc9c;
+}
+
+/* Highlighting Important Text */
+strong {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-card {
+        padding: 10px;
+    }
+}
+/* Header Styles */
+.header {
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}

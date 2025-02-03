@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ organization.name }} Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/SOD.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, {{ organization.name }}</h1>
+
+        <!-- Company Information -->
+        <div class="company-info">
+            <h3>Company Information</h3>
+            <p><strong>Name:</strong> {{ organization.name }}</p>
+            <p><strong>Address:</strong> {{ organization.address }}</p>
+            <p><strong>Email:</strong> {{ organization.email }}</p>
+            <p><strong>Phone:</strong> {{ organization.phone }}</p>
+        </div>
+
+        <h2>Your Job Openings</h2>
+
+        <div class="job-list">
+            {% for job in job_openings %}
+            <div class="job-item">
+                <h3>{{ job.job_title }}</h3>
+                <p><strong>Description:</strong> {{ job.job_description }}</p>
+                <p><strong>Skills Required:</strong> {{ job.required_skills }}</p>
+                <p><strong>Pay:</strong> ${{ job.pay }}</p>
+                <p><strong>Location:</strong> {{ job.location }}</p>
+
+                <a href="{% url 'edit_job' job.id %}">Edit</a>
+
+                <!-- Delete Button -->
+                <form action="{% url 'delete_job' job.id %}" method="post" style="display: inline-block;">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-btn">Delete</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+
+        <a href="{% url 'create_job' organization.id %}">Create Job</a>
+
+    </div>
+</body>
+</html>

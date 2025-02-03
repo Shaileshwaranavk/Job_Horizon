@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ job.job_title }} Details</title>
+    <link rel="stylesheet" href="{% static 'css/SO.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>{{ job.job_title }}</h1>
+        <p><strong>Company:</strong> {{ job.organization.name }}</p>
+        <p><strong>Location:</strong> {{ job.location }}</p>
+        <p><strong>Description:</strong> {{ job.job_description }}</p>
+        <p><strong>Skills Required:</strong> {{ job.required_skills }}</p>
+        <p><strong>Pay:</strong> ${{ job.pay }}</p>
+        <p><strong>Contact Email:</strong> {{ job.organization.email }}</p>
+        <p><strong>Contact Phone:</strong> {{ job.organization.phone }}</p>
+
+        <!-- Apply button (Optional) -->
+        <a href="mailto:{{ job.organization.email }}?subject=Application for {{ job.job_title }}" class="apply-button">Apply Now</a>
+    </div>
+</body>
+</html>

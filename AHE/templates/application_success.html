@@ -1,0 +1,56 @@
+<!-- application_success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Success</title>
+    <link rel="stylesheet" href="{% static 'css/AS.css' %}">
+</head>
+<body>
+    <h2>Application Details</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Applicant Name</th>
+                <th>Skills</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Resume</th>
+                <th>Expected Pay</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ applicant_data.name }}</td>
+                <td>{{ applicant_data.skills }}</td>
+                <td>{{ applicant_data.email }}</td>
+                <td>{{ applicant_data.phone }}</td>
+                <td><a href="{{ applicant_data.resume }}" target="_blank">Download Resume</a></td>
+                <td>{{ applicant_data.expected_pay }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Job Details</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Organization ID</th>
+                <th>Organization Name</th>
+                <th>Job Title</th>
+                <th>Pay Offered</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ job_data.org_id }}</td>
+                <td>{{ job_data.org_name }}</td>
+                <td>{{ job_data.job_title }}</td>
+                <td>{{ job_data.pay_offered }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

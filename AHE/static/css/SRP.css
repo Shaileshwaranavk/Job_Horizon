@@ -1,0 +1,116 @@
+/* General reset */
+body, h1, h2, p, div, form, input, label, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Left Section */
+.left-section {
+    width: 40%;
+    background-color: #013a63;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-section img {
+    max-width: 80%;
+    border-radius: 8px;
+}
+
+/* Right Section */
+.right-section {
+    width: 60%;
+    padding: 30px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 80vh; /* Limits height for scroll */
+}
+
+.right-section h2 {
+    font-size: 2rem;
+    color: #013a63;
+    margin-bottom: 10px;
+}
+
+.right-section p {
+    margin-bottom: 20px;
+    color: #555555;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #013a63;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
+
+form button {
+    background-color: #013a63;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005b96;
+}
+/* Login Account Button Styling */
+.login-account button {
+    background-color: transparent;
+    border: 2px solid #005a99; /* Medium blue border */
+    color: #005a99; /* Medium blue text */
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-account button:hover {
+    background-color: #005a99; /* Medium blue background on hover */
+    color: white; /* White text on hover */
+}

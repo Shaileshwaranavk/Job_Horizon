@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'css/SP.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+
+        <div class="profile-photo">
+            <!-- Display user's photo -->
+            <img src="{{ user.photo.url }}" alt="Profile Photo">
+            <p>Profile Photo</p>
+        </div>
+
+        <!-- Display user's basic information -->
+        <div class="profile-info">
+            <label for="name">Full Name:</label>
+            <p>{{ user.name }}</p>
+
+            <label for="role">Role:</label>
+            <p>{{ user.role }}</p>
+
+            <label for="company_size">Company Size:</label>
+            <p>{{ user.company_size }}</p>
+
+            <label for="email">Email:</label>
+            <p>{{ user.email }}</p>
+
+            <label for="phone">Phone Number:</label>
+            <p>{{ user.phone }}</p>
+
+            <label for="experience">Experience:</label>
+            <p>{{ user.experience }}</p>
+
+            <label for="expected_pay">Expected Pay:</label>
+            <p>{{ user.expected_pay }}</p>
+
+            <label for="projects">Projects:</label>
+            <p>{{ user.projects }}</p>
+
+            <label for="github">GitHub:</label>
+            <p><a href="{{ user.github }}" target="_blank">{{ user.github }}</a></p>
+
+            <label for="portfolio">Portfolio:</label>
+            <p><a href="{{ user.portfolio }}" target="_blank">{{ user.portfolio }}</a></p>
+
+            <label for="linkedin">LinkedIn:</label>
+            <p><a href="{{ user.linkedin }}" target="_blank">{{ user.linkedin }}</a></p>
+        </div>
+
+        <!-- Resume Download Section -->
+        <div class="resume-download">
+            <label for="resume">Download Resume:</label>
+            <p>
+                {% if user.resume %}
+                    <a href="{{ user.resume.url }}" download>Click here to download your resume</a>
+                {% else %}
+                    <span>No resume uploaded</span>
+                {% endif %}
+            </p>
+        </div>
+
+        <!-- Button to go back -->
+        <button onclick="window.history.back();">Go Back</button>
+
+        <!-- Job Openings Button -->
+        <div class="job-openings">
+            <a href="{% url 'job_openings_list' %}">
+                <button>Job Openings</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

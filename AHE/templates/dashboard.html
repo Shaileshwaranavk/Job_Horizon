@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="left-section">
+            <h2>Logged-In Users</h2>
+            <form method="POST" action="{% url 'dashboard' %}">
+                {% csrf_token %}
+                <input type="text" name="search_query" placeholder="Search Users">
+                <button type="submit">Search</button>
+            </form>
+            <ul>
+                {% for user in users %}
+                    <li>{{ user.name }} - {{ user.email }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="right-section">
+            <h2>Job Postings</h2>
+            <form method="POST" action="{% url 'dashboard' %}">
+                {% csrf_token %}
+                <input type="text" name="search_query" placeholder="Search Jobs">
+                <button type="submit">Search</button>
+            </form>
+            <ul>
+                {% for job in jobs %}
+                    <li>
+                        <h3>{{ job.job_title }}</h3>
+                        <p><strong>Description:</strong> {{ job.job_description }}</p>
+                        <p><strong>Skills Required:</strong> {{ job.required_skills }}</p>
+                        <p><strong>Pay:</strong> ${{ job.pay }}</p>
+                        <p><strong>Location:</strong> {{ job.location }}</p>
+
+                        <!-- Suggest button for admin to email user details to the company -->
+                        <form method="POST" action="{% url 'suggest_user_to_job' job.id %}">
+                            {% csrf_token %}
+                            <label for="user_id">Select User to Suggest:</label>
+                            <select name="user_id" required>
+                                {% for user in users %}
+                                    <option value="{{ user.id }}">{{ user.name }}</option>
+                                {% endfor %}
+                            </select>
+                            <button type="submit">Suggest</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

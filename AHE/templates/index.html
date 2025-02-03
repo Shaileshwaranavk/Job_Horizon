@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  {% load static %}
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>AD HOC EXPERTISE</title>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/SHP.css' %}" rel="stylesheet" />
+  <!-- Add Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Header section starts -->
+    <header class="header_section">
+      <div class="container-fluid"></div>
+    </header>
+    <!-- End header section -->
+
+    <!-- Slider section -->
+    <section class="slider_section">
+      <div class="carousel_btn-container"></div>
+      <div id="carouselExampleIndicators" class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-5 offset-md-1">
+                  <div class="detail-box">
+                    <h1>
+                      You Can Get<br />
+                      Hired By a Company<br />
+                      Here
+                    </h1>
+                    <p>
+                      Your skills are your superpower—unlock endless opportunities and
+                      shape your own success story as a freelancer.
+                    </p>
+                    <div class="btn-box">
+                      <div class="d-flex">
+                        <a href="{% url 'register' %}" class="btn btn-primary mr-2">Register Here</a>
+                        <a href="{% url 'login_page' %}" class="btn btn-primary mr-2">Login Here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-md-1 col-md-4 img-container">
+                  <div class="img-box">
+                    <img src="{% static 'images/slider-img.png' %}" alt="Slider Image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End slider section -->
+  </div>
+
+  <!-- Experience section -->
+  <section class="experience_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="{% static 'images/experience-img.jpg' %}" alt="Experience Image" />
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>Best Experienced Freelancer Here</h2>
+            </div>
+            <p>
+              It is a long-established fact that a reader will be distracted by the
+              readable content of a page when looking at its layout. The point of using
+              Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+            </p>
+            <div class="btn-box">
+              <a href="{% url 'Organization_Register_Page' %}" class="btn btn-primary mr-2">Register Here</a>
+              <a href="{% url 'Organization_Login_Page' %}" class="btn btn-primary mr-2">Login Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Companies section -->
+  <section class="top_companies_section layout_padding">
+    <div class="container">
+      <div class="heading_container text-center">
+        <h2>Top Companies</h2>
+      </div>
+      <div class="row">
+        <!-- Company 1 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card company-card">
+            <div class="card-body text-center">
+              <div class="company-img">
+                <img src="https://via.placeholder.com/150" alt="Company Logo" />
+              </div>
+              <h5 class="card-title">TechCorp</h5>
+              <p>Leading Technology Solutions</p>
+              <p class="website"><a href="https://techcorp.com">techcorp.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company 2 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card company-card">
+            <div class="card-body text-center">
+              <div class="company-img">
+                <img src="https://via.placeholder.com/150" alt="Company Logo" />
+              </div>
+              <h5 class="card-title">WebSolutions</h5>
+              <p>Innovative Web Development</p>
+              <p class="website"><a href="https://websolutions.com">websolutions.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company 3 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card company-card">
+            <div class="card-body text-center">
+              <div class="company-img">
+                <img src="https://via.placeholder.com/150" alt="Company Logo" />
+              </div>
+              <h5 class="card-title">GreenTech</h5>
+              <p>Sustainable Technology Innovations</p>
+              <p class="website"><a href="https://greentech.com">greentech.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company 4 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card company-card">
+            <div class="card-body text-center">
+              <div class="company-img">
+                <img src="https://via.placeholder.com/150" alt="Company Logo" />
+              </div>
+              <h5 class="card-title">FinSecure</h5>
+              <p>Financial Services & Security</p>
+              <p class="website"><a href="https://finsecure.com">finsecure.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">Explore More Companies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Freelancer section -->
+  <section class="freelancer_section layout_padding">
+    <div class="container">
+      <div class="heading_container text-center">
+        <h2>Top Freelancers</h2>
+      </div>
+      <div class="row">
+        <!-- Freelancer 1 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card freelancer-card">
+            <div class="card-body text-center">
+              <div class="freelancer-img">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Freelancer Image" />
+              </div>
+              <h5 class="card-title">Henry Paulista</h5>
+              <p>Senior Creative Director</p>
+              <p class="email">henry@gmail.com</p>
+              <div class="progress-bar custom-progress-bar">
+                <div class="progress" style="width: 100%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Freelancer 2 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card freelancer-card">
+            <div class="card-body text-center">
+              <div class="freelancer-img">
+                <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Freelancer Image" />
+              </div>
+              <h5 class="card-title">Evan Jefferson</h5>
+              <p>Creative Director</p>
+              <p class="email">evan@gmail.com</p>
+              <div class="progress-bar custom-progress-bar">
+                <div class="progress" style="width: 82%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Freelancer 3 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card freelancer-card">
+            <div class="card-body text-center">
+              <div class="freelancer-img">
+                <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Freelancer Image" />
+              </div>
+              <h5 class="card-title">Alice McKenzie</h5>
+              <p>Senior Copywriter</p>
+              <p class="email">alice.mckenzie@gmail.com</p>
+              <div class="progress-bar custom-progress-bar">
+                <div class="progress" style="width: 100%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Freelancer 4 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card freelancer-card">
+            <div class="card-body text-center">
+              <div class="freelancer-img">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Freelancer Image" />
+              </div>
+              <h5 class="card-title">Sophia Williams</h5>
+              <p>Graphic Designer</p>
+              <p class="email">sophia.williams@gmail.com</p>
+              <div class="progress-bar custom-progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">Explore More Freelancers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2024 AD HOC EXPERTISE. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="{% url 'admin_login' %}" class="btn btn-primary mr-2">Admin Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and other necessary scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

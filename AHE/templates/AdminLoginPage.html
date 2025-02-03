@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/SLP.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="{% static 'images/Admin.png' %}" alt="Illustration">
+        </div>
+        <div class="right-section">
+            <h1>Sign In</h1>
+            <p>Unlock your world.</p>
+
+            <!-- Display messages -->
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <form method="POST">
+                {% csrf_token %}
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

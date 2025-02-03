@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+.container, .dashboard-container, .edit-job-container {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-list {
+    margin-top: 20px;
+}
+
+.job-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.job-item h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.job-item p {
+    font-size: 1em;
+    color: #7f8c8d;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

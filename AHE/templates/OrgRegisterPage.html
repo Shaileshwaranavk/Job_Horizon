@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/SRP.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="{% static 'images/IORP.png' %}" alt="Illustration">
+        </div>
+        <!-- Right Section -->
+        <div class="right-section">
+            <h1>Register</h1>
+            <p>Fill in your details to register your company.</p>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="organization_name">Name of Organization</label>
+                    <input type="text" id="organization_name" name="organization_name" required>
+                </div>
+                <div>
+                    <label for="manager_name">Name of Manager</label>
+                    <input type="text" id="manager_name" name="manager_name" required>
+                </div>
+                <div>
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="contact_number">Contact Number</label>
+                    <input type="tel" id="contact_number" name="contact_number" required>
+                </div>
+                <div>
+                    <label for="password">Create a Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                    <label for="company_size">Size of Company</label>
+                    <input type="text" id="company_size" name="company_size" required>
+                </div>
+                <div>
+                    <label for="company_description">Description about Company</label>
+                    <textarea id="company_description" name="company_description" required></textarea>
+                </div>
+                <div>
+                    <label for="company_type">Type of Company</label>
+                    <input type="text" id="company_type" name="company_type" required>
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+                <div class="login-account">
+                    <button type="button" onclick="location.href='{% url 'Organization_Login_Page' %}';">Login to Already Existing Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
